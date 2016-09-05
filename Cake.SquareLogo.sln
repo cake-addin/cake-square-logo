@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Cake.SquareLogo", "Cake.SquareLogo\Cake.SquareLogo.fsproj", "{02154536-E351-4943-ADD0-D30C858D5978}"
+EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Cake.SquareLogo.Tests", "Cake.SquareLogo.Tests\Cake.SquareLogo.Tests.fsproj", "{C57C42EE-1C85-4FA5-B469-F05CF7C8CA26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02154536-E351-4943-ADD0-D30C858D5978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02154536-E351-4943-ADD0-D30C858D5978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02154536-E351-4943-ADD0-D30C858D5978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02154536-E351-4943-ADD0-D30C858D5978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57C42EE-1C85-4FA5-B469-F05CF7C8CA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57C42EE-1C85-4FA5-B469-F05CF7C8CA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57C42EE-1C85-4FA5-B469-F05CF7C8CA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57C42EE-1C85-4FA5-B469-F05CF7C8CA26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
