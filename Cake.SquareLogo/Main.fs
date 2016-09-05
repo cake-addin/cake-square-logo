@@ -53,7 +53,7 @@ let drawText(text, output: string,  settings: DrawSetting) =
 
      let info = FileInfo(output)
      if not info.Directory.Exists  then info.Directory.Create()
-     image.Save(info.FullName)
+     image.Save(info.FullName, Imaging.ImageFormat.Png)
 
 
 
