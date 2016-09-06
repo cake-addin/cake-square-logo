@@ -1,20 +1,25 @@
 ﻿module Cake.SquareLogo.Tests.Logo
 
 open Cake.SquareLogo.Main
+open Cake.SquareLogo.LogoAlias
 open System.Drawing
 open NUnit.Framework
 open FluentAssertions
+open Cake.Core.Annotations
+open Cake.Core
 
 [<Test>]
 let shouldAdd()  = (1 + 1).Should().Be(2, "") |> ignore
 
 [<Test>]
-let shouldCreateLogo() =
-      let family = new FontFamily("Monaco")
-      let font = new Font(family, 40.0f , FontStyle.Regular, GraphicsUnit.Pixel)
+let shouldCreateLogoWithAlias(x: ICakeContext) =
+      x.CreateLogo("", "")
 
+[<Test>]
+let shouldCreateLogo() =
       let settings = 
-            { //FontFamily = "American Typewriter"
+            { 
+              //FontFamily = "American Typewriter"
               FontFamily = "Optima"
               //FontFamily = "Gill Sans"
               //FontFamily = "Skia"
@@ -39,7 +44,7 @@ let shouldCreateLogo() =
       drawText("ASP", "Screen/asp.png", settings)
       drawText("TSC", "Screen/typescript.png", settings)
       drawText("JWN", "Screen/jannine.png", settings)
-      drawText("LSP", "Screen/listp.png", settings)
+      drawText("LSP", "Screen/lisp.png", settings)
       drawText("VTX", "Screen/vertx.png", settings)
       drawText("WPK", "Screen/webpack.png", settings)
       drawText("JSC", "Screen/javascript.png", settings)

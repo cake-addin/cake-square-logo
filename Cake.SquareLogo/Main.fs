@@ -2,8 +2,9 @@
 
 open System.Drawing
 open System.IO
+open System.Linq
 
-type DrawSetting =
+type DrawSettings =
       { FontFamily: string
         FontSize: float32
         Foreground: string
@@ -44,7 +45,7 @@ let startDraw(text: string, font: Font, color: Color, back: Color) =
 
       image
 
-let drawText(text, output: string,  settings: DrawSetting) =
+let drawText(text, output: string,  settings: DrawSettings) =
      let family = new FontFamily(settings.FontFamily)
      let font = new Font(family, settings.FontSize, FontStyle.Regular, GraphicsUnit.Pixel)
      let color = Color.FromName(settings.Foreground)

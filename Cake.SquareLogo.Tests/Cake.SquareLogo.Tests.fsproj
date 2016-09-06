@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Cake.SquareLogo.Tests</RootNamespace>
     <AssemblyName>Cake.SquareLogo.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +50,9 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Cake.Core">
+      <HintPath>..\packages\Cake.Core.0.15.2\lib\net45\Cake.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
@@ -63,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="README.cs">
+      <DependentUpon>README.tt</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
 </Project>
