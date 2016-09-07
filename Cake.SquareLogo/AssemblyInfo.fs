@@ -12,9 +12,11 @@ open System.Runtime.CompilerServices
 
 // The assembly version has the format {Major}.{Minor}.{Build}.{Revision}
 
-[<assembly: AssemblyVersion("1.0.0.0")>]
+[<assembly: AssemblyVersion("0.1.0.0")>]
+// [<assembly: AssemblyFileVersion("0.1.0.0")>]
+
 
 //[<assembly: AssemblyDelaySign(false)>]
 //[<assembly: AssemblyKeyFile("")>]
 
-()
+do  ()

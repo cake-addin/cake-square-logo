@@ -1,9 +1,21 @@
 ﻿
 ## Cake.SquareLogo
 
-Create square logo for Github organization.
+Create square text-logo for Github organization.
 
 Under development ...
+
+## Install
+
+> `#addin "nuget:?package=Cake.SquareLogo"`
+
+## Create Logo
+
+```csharp
+Task("Create-Logo").Does(() => {
+    CreateLogo("Hello", "Hello.png");
+});
+```
 
 ![](Screen/alfresco.png)
 ![](Screen/angular.png)

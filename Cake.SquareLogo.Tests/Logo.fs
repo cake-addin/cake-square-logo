@@ -13,7 +13,7 @@ let shouldAdd()  = (1 + 1).Should().Be(2, "") |> ignore
 
 [<Test>]
 let shouldCreateLogoWithAlias(x: ICakeContext) =
-      x.CreateLogo("", "")
+      x.CreateLogo("Hello", "Hello.png")
 
 [<Test>]
 let shouldCreateLogo() =

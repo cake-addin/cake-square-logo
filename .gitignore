@@ -1,10 +1,11 @@
+nuget
 Tests
 # Autosave files
 *~
 TestResult.*
 
-build.ps1
-build.cmd
+#build.ps1
+#build.cmd
 
 tools
 

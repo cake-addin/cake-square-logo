@@ -1,10 +1,23 @@
-#tool "nuget:?package=Fixie"
 #addin "nuget:?package=Cake.Watch"
-#tool "nuget:?package=NUnit.ConsoleRunner"
 #tool "nuget:?package=Mono.TextTransform"
 
 var solution = "Cake.SquareLogo.sln";
 var testDll = "Cake.SquareLogo.Tests/bin/Debug/Cake.SquareLogo.Tests.dll";
+var debugDll = "Cake.SquareLogo/bin/Debug/Cake.SquareLogo.dll";
+var releaseDll = "Cake.SquareLogo/bin/Release/Cake.SquareLogo.dll";
+var npi = EnvironmentVariable("npi");
+
+var id = "Cake.SquareLogo";
+var title = "Cake.SquareLogo";
+var description = "Create square logo for Github organization";
+var projectUrl = "https://github.com/cake-addin/cake-square-logo";
+var releaseNotes = new[] { "New version" };
+var tags = new [] { "Cake", "Logo" };
+
+var files = new [] {
+    releaseDll,
+    releaseDll.Replace("Cake.SquareLogo.dll", "FSharp.Core.dll")
+};
 
 Task("Transform").Does(() => {
     TransformTemplate("Template/README.tt", new TextTransformSettings {
@@ -12,26 +25,11 @@ Task("Transform").Does(() => {
     });
 });
 
-Task("Test")
-    .Does(() => {
-    		CleanDirectory("Screen");
-            DotNetBuild(solution);
-            NUnit3(testDll);
-    });
-
-Task("Watch")
-    .Does(() => {
-        var settings = new WatchSettings {
-            Recursive = true,
-            Path = "./",
-            Pattern = "*.fs"
-        };
-        Watch(settings, (changed) => {
-            Diff(1000, () => {
-                RunTarget("test");
-            });
-        });
-    });
+#load "./Config/version.cake"
+#load "./Config/compile.cake"
+#load "./Config/test.cake"
+#load "./Config/nuget.cake"
 
 var target = Argument("target", "default");
 RunTarget(target);
+

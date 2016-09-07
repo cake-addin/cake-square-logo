@@ -10,7 +10,7 @@ type DrawSettings =
         Foreground: string
         Background: string }
 
-let startDraw(text: string, font: Font, color: Color, back: Color) =
+let private startDraw(text: string, font: Font, color: Color, back: Color) =
 
       let padding = 20.0f
 
