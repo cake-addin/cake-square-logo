@@ -13,6 +13,8 @@ type LogoSettings() =
       member val Background = "DimGray" with set,get
 
 [<Extension>]
+[<AbstractClass>]
+[<Sealed>]
 type ContextExtension =
       [<CakeMethodAlias>]
       [<Extension>]
