@@ -31,22 +31,3 @@ type ContextExtension =
       static member CreateLogo(context: ICakeContext, text: string, outputPath: string) =
             let settings = LogoSettings()
             ContextExtension.CreateLogo(context, text, outputPath, settings)
-(*
-type ICakeContext with
-
-      [<CakeMethodAlias>]
-      member this.CreateLogo(text: string, outputPath: string) =
-            let settings = LogoSettings()
-            this.CreateLogo(text, outputPath, settings)
-
-      [<CakeMethodAlias>]
-      member this.CreateLogo(text: string, outputPath: string, settings: LogoSettings) =
-            let settings =
-                { DrawSettings.FontSize =  settings.FontSize
-                  FontFamily = settings.FontFamily
-                  Foreground = settings.Foreground
-                  Background = settings.Background }
-            drawText(text, outputPath, settings)
-*)
-
-
