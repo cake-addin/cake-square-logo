@@ -18,6 +18,7 @@ Task("Create-Colorful-Logo").Does(() => {
     var settings = new LogoSettings {
         FontFamily = "Papyrus",
         FontSize = 50,
+        Padding = 30,
         Foreground = "White",
         Background = "Green"
     };

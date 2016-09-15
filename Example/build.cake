@@ -1,10 +1,10 @@
-#addin "nuget:?package=Cake.SquareLogo"
+// #addin "nuget:?package=Cake.SquareLogo"
 // #r "../Cake.SquareLogo/bin/Debug/Cake.SquareLogo.dll"
-// #r "../Cake.SquareLogo/bin/Release/Cake.SquareLogo.dll"
+#r "../Cake.SquareLogo/bin/Debug/Cake.SquareLogo.dll"
 //#r "../Cake.SquareLogo.CSharp/bin/Debug/FSharp.Core.dll"
 //#r "../Cake.SquareLogo.CSharp/bin/Debug/FSharp.Core.Fluent-4.0.dll"
 
-// using Cake.SquareLogo.LogoAlias;
+using Cake.SquareLogo.LogoAlias;
 // using FSharp.Core.Fluent;
 // using Microsoft.FSharp.Collections;
 
@@ -21,12 +21,13 @@ Task("Create-Logo").Does(() => {
 
 Task("Create-Colorful-Logo").Does(() => {
     var settings = new LogoSettings {
-        FontFamily = "Papyrus",
+        FontFamily = "Cochin",
         FontSize = 50,
+        Padding = 50,
         Foreground = "White",
-        Background = "Green"
+        Background = "Pink"
     };
-    CreateLogo("Hey!", "Colorful.png", settings);
+    CreateLogo("wk", "Colorful.png", settings);
 });
 
 var target = Argument("target", "default");

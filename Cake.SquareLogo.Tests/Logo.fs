@@ -20,11 +20,13 @@ let shouldCreateLogo() =
       let settings = 
             { 
               //FontFamily = "American Typewriter"
-              FontFamily = "Optima"
+              //FontFamily = "Tahoma"
               //FontFamily = "Gill Sans"
-              //FontFamily = "Skia"
+              // FontFamily = "Skia"
+              FontFamily = "Optima"
               FontSize = 45.0f
               Foreground = "White"
+              Padding = 30.0f
               Background = "DimGray" }
 
       drawText("C#",  "Screen/csharp.png", settings)
