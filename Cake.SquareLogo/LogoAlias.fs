@@ -12,6 +12,7 @@ type LogoSettings() =
       member val Foreground = "White" with set,get
       member val Background = "DimGray" with set,get
       member val Padding = 20.0f with set,get
+      member val NoSquare = false with set,get
 
 [<Extension>]
 [<AbstractClass>]
@@ -25,6 +26,7 @@ type ContextExtension =
                   FontFamily = settings.FontFamily
                   Foreground = settings.Foreground
                   Padding = settings.Padding
+                  NoSquare = settings.NoSquare
                   Background = settings.Background }
             drawText(text, outputPath, settings)
 

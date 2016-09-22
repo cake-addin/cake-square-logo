@@ -9,9 +9,10 @@ type DrawSettings =
         FontSize: float32
         Foreground: string
         Padding: float32
+        NoSquare: bool
         Background: string }
 
-let private startDraw(text: string, font: Font, color: Color, back: Color, padding) =
+let private startDraw(text: string, font: Font, color: Color, back: Color, padding, square) =
 
       let textSize(drawing: Graphics) = 
             drawing.MeasureString(text, font)
@@ -21,7 +22,9 @@ let private startDraw(text: string, font: Font, color: Color, back: Color, paddi
             let drawing = Graphics.FromImage(image)
             let textSize = textSize drawing
             let width = textSize.Width + padding |> int
-            new Bitmap(width, width)
+            match square with
+            | true -> new Bitmap(width, width)
+            | false -> new Bitmap(width, textSize.Height + padding |> int)
 
       let createGraphics(image: Image) =
             let drawing = Graphics.FromImage(image)
@@ -50,7 +53,7 @@ let drawText(text, output: string,  settings: DrawSettings) =
      let color = Color.FromName(settings.Foreground)
      let back = Color.FromName(settings.Background)
      let padding = if settings.Padding = 0.0f then 20.0f else settings.Padding
-     use image = startDraw(text, font, color, back, padding);
+     use image = startDraw(text, font, color, back, padding, not settings.NoSquare);
 
      let info = FileInfo(output)
      if not info.Directory.Exists  then info.Directory.Create()

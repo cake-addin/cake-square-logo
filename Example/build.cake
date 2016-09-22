@@ -15,19 +15,32 @@ Task("List-Max").Does(() => {
 });
 */
 
+Task("NoSquare").Does(() => {
+    var settings = new LogoSettings {
+        FontFamily = "Optima",
+        FontSize = 20,
+        Padding = 20,
+        Foreground = "White",
+        Background = "SlateBlue",
+        NoSquare = true
+    };
+    CreateLogo("Hello, world", "Colorful.png", settings);
+});
+
 Task("Create-Logo").Does(() => {
     CreateLogo("Logo", "Logo.png");
 });
 
 Task("Create-Colorful-Logo").Does(() => {
     var settings = new LogoSettings {
-        FontFamily = "Cochin",
-        FontSize = 50,
-        Padding = 50,
+        FontFamily = "Optima",
+        FontSize = 150,
+        Padding = 150,
         Foreground = "White",
-        Background = "Pink"
+        Background = "SlateBlue",
+        //Background = "SeaGreen"
     };
-    CreateLogo("wk", "Colorful.png", settings);
+    CreateLogo("w", "Colorful.png", settings);
 });
 
 var target = Argument("target", "default");

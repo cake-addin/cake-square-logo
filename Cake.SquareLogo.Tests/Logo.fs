@@ -26,6 +26,7 @@ let shouldCreateLogo() =
               FontFamily = "Optima"
               FontSize = 45.0f
               Foreground = "White"
+              NoSquare = false
               Padding = 30.0f
               Background = "DimGray" }
 
