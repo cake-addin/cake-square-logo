@@ -3,7 +3,7 @@ Task("Build-Release").Does(() => {
         settings.SetConfiguration("Release")
         //.SetVerbosity(Core.Diagnostics.Verbosity.Minimal)
         .WithTarget("Build")
-        .WithProperty("TreatWarningsAsErrors","true"));
+        .WithProperty("TreatWarningsAsErrors","false"));
 });
 
 

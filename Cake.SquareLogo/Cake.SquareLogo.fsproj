@@ -40,17 +40,15 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <Reference Include="Cake.Core">
-      <HintPath>..\packages\Cake.Core.0.15.2\lib\net45\Cake.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="Cake.Core">
+      <HintPath>..\packages\Cake.Core.0.18.0\lib\net45\Cake.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Main.fs" />
     <Compile Include="LogoAlias.fs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />

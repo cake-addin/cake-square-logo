@@ -15,12 +15,15 @@ Task("Create-Nuget-Package")
     .Does(() => {
         var nugetFiles = files.Select(file => {
                 var full = new System.IO.FileInfo(file).FullName;
+                var current = new DirectoryInfo("./").FullName;
+                full = full.Replace(current, "");
                 Console.WriteLine(full);
                 return new NuSpecContent { Source = full, Target = "bin/net45" };
         }).ToArray();
 
         CleanDirectory("./nuget");
         var version = getVersion();
+        Console.WriteLine(version);
         var settings   = new NuGetPackSettings {
                                         //ToolPath                = "./tools/nuget.exe",
                                         Id                      = id,

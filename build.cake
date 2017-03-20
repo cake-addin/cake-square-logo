@@ -10,7 +10,7 @@ var npi = EnvironmentVariable("npi");
 var id = "Cake.SquareLogo";
 var title = "Cake.SquareLogo";
 var description = "Create square logo for Github organization";
-var projectUrl = "https://github.com/cake-addin/cake-square-logo";
+var projectUrl = "https://github.com/wk-j/cake-square-logo";
 var releaseNotes = new[] { "New version" };
 var tags = new [] { "Cake", "Logo" };
 
