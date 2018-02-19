@@ -1,8 +1,8 @@
 ﻿## Cake.SquareLogo
 
-Create square text-logo for Github organization.
+Create square text log with Cake
 
-## Install
+## Installation
 
 `#addin "nuget:?package=Cake.SquareLogo"`
 
