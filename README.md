@@ -1,6 +1,6 @@
 ﻿## Cake.SquareLogo
 
-Create square text log with Cake
+Create square text logo with Cake
 
 ## Installation
 
