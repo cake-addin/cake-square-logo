@@ -1,8 +1,7 @@
 ﻿module Cake.SquareLogo.Main
 
-open System.Drawing
 open System.IO
-open System.Linq
+open System.Drawing
 
 type DrawSettings =
       { FontFamily: string

@@ -2,20 +2,13 @@
 
 open Cake.SquareLogo.Main
 open Cake.SquareLogo.LogoAlias
-open System.Drawing
-open NUnit.Framework
-open FluentAssertions
-open Cake.Core.Annotations
 open Cake.Core
+open Xunit
 
-[<Test>]
-let shouldAdd()  = (1 + 1).Should().Be(2, "") |> ignore
-
-[<Test>]
 let shouldCreateLogoWithAlias(x: ICakeContext) =
       x.CreateLogo("Hello", "Hello.png")
 
-[<Test>]
+[<Fact>]
 let shouldCreateLogo() =
       let settings = 
             { 
