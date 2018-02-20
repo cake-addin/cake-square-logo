@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <Version>0.1.0</Version>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>0.8.0</Version>
+    <TargetFrameworks>net461</TargetFrameworks>
+    <PackageId>Cake.SquareLogo</PackageId>
+    <FrameworkPathOverride>/usr/local/Cellar/mono/5.4.1.6/lib/mono/4.7-api</FrameworkPathOverride>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.fs" />

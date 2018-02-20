@@ -1,4 +1,5 @@
-Example/*.png
+example/*.png
+publish
 .vs
 nuget
 Tests

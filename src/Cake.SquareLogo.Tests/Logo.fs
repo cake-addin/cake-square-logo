@@ -9,13 +9,24 @@ let shouldCreateLogoWithAlias(x: ICakeContext) =
       x.CreateLogo("Hello", "Hello.png")
 
 [<Fact>]
+let createHi() = 
+      printfn "Hi"
+      let settings = 
+            { 
+              FontFamily = "Optima"
+              FontSize = 45.0f
+              Foreground = "White"
+              NoSquare = false
+              Padding = 30.0f
+              Background = "DimGray" }
+
+      drawText("Hi", "Hi.png", settings)
+
+
+// [<Fact>]
 let shouldCreateLogo() =
       let settings = 
             { 
-              //FontFamily = "American Typewriter"
-              //FontFamily = "Tahoma"
-              //FontFamily = "Gill Sans"
-              // FontFamily = "Skia"
               FontFamily = "Optima"
               FontSize = 45.0f
               Foreground = "White"
