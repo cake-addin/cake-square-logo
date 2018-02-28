@@ -1,9 +1,24 @@
-// #addin nuget:?package=ProjectParser&version=0.3.0
+#addin nuget:?package=ProjectParser&version=0.3.0
 
-// using ProjectParser;
+using ProjectParser;
 
 var name = "Cake.SquareLogo";
 var npi = EnvironmentVariable("npi");
+
+var repo = 
+        System.Environment.OSVersion.Platform == System.PlatformID.Unix 
+        ? "/Users/wk/NuGet"
+        // ? @"/Volumes/B Circle Software/NugetPackages"
+        : @"\\192.168.0.115\B Circle Software\NugetPackages";
+
+Task("Pack").Does(() => {
+    var project = $"src/{name}/{name}.fsproj";
+    var settings = new DotNetCorePackSettings {
+        OutputDirectory = repo
+    };
+    DotNetCorePack(project, settings);
+});
+
 
 Task("Create-NuGet-Package").Does(() => {
     var project = $"src/{name}/{name}.fsproj";

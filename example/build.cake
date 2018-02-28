@@ -1,6 +1,5 @@
-#r "../src/Cake.SquareLogo/bin/Debug/net461/Cake.SquareLogo.dll"
-
-using Cake.SquareLogo.LogoAlias;
+// #addin nuget:?package=System.Drawing.Common&Version=4.5.0-preview1-26216-02&prerelease
+#addin nuget:?package=Cake.SquareLogo&Version=0.9.1
 
 Task("Create-Logo").Does(() => {
     CreateLogo("Hello", "Hello.png");
