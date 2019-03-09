@@ -11,6 +11,7 @@
         "node_modules": true,
         ".cache": true,
         "tools": true,
+        "**/tools": true,
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
