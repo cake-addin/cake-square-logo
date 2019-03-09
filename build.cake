@@ -12,26 +12,21 @@ var info = Parser.Parse($"src/{name}/{name}.fsproj");
 var publishDir = ".publish";
 var version = DateTime.Now.ToString("yy.MM.dd.HHmm");
 
-Task("Pack").Does(() => {
-    var settings = new DotNetCoreMSBuildSettings();
-    settings.Properties["Version"] = new string[] { version };
+var settings = new DotNetCoreMSBuildSettings();
+settings.Properties["Version"] = new string[] { version };
 
+Task("Pack").Does(() => {
     CleanDirectory(publishDir);
-    DotNetCorePack($"src/{name}", new DotNetCorePackSettings {
+
+    DotNetCorePack($"src/Cake.SquareLogo", new DotNetCorePackSettings {
         OutputDirectory = publishDir,
         MSBuildSettings = settings
     });
-});
 
-Task("Publish-NuGet")
-    .IsDependentOn("Pack")
-    .Does(() => {
-        var nupkg = new DirectoryInfo(publishDir).GetFiles("*.nupkg").LastOrDefault();
-        var package = nupkg.FullName;
-        NuGetPush(package, new NuGetPushSettings {
-            Source = "https://www.nuget.org/api/v2/package",
-            ApiKey = nugetToken
-        });
+    DotNetCorePack($"src/SquareLogo", new DotNetCorePackSettings {
+        OutputDirectory = publishDir,
+        MSBuildSettings = settings
+    });
 });
 
 Task("Install")
