@@ -2,9 +2,8 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <Version>0.9.1</Version>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageId>Cake.SquareLogo</PackageId>
-    <FrameworkPathOverride>/usr/local/Cellar/mono/5.4.1.6/lib/mono/4.7-api</FrameworkPathOverride>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.fs" />

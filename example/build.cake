@@ -1,4 +1,3 @@
-// #addin nuget:?package=System.Drawing.Common&Version=4.5.0-preview1-26216-02&prerelease
 #addin nuget:?package=Cake.SquareLogo&Version=0.9.1
 
 Task("Create-Logo").Does(() => {

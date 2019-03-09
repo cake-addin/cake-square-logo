@@ -1,52 +1,21 @@
-example/*.png
-publish
-.vs
-nuget
-Tests
-# Autosave files
-*~
-TestResult.*
+.DS_Store
 
-#build.ps1
-#build.cmd
+node_modules
+dist
+.cache
 
+bin
+obj
+packages
 tools
+publish
 
+.paket
+.settings
+.classpath
+.project
+.working
+.publish
 
-# build
-[Oo]bj/
-[Bb]in/
-packages/
-TestResults/
-
-# globs
-Makefile.in
-*.DS_Store
-*.sln.cache
-*.suo
-*.cache
-*.pidb
-*.userprefs
-*.usertasks
-config.log
-config.make
-config.status
-aclocal.m4
-install-sh
-autom4te.cache/
-*.user
-*.tar.gz
-tarballs/
-test-results/
-Thumbs.db
-
-# Mac bundle stuff
-*.dmg
-*.app
-
-# resharper
-*_Resharper.*
-*.Resharper
-
-# dotCover
-*.dotCover
+target
+BenchmarkDotNet.Artifacts
